@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/qrious@4.0.2/dist/qrious.js"></script>
+    <title>Página con Códigos QR</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .codigo-qr {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="codigo1" class="codigo-qr">
+    <!-- Coloca aquí el código QR 1 -->
+    <img alt="Código QR 1" id="codigo">
+    <script>
+		new QRious({
+			element: document.querySelector("#codigo"),
+			value: "youtube.com", // La URL o el texto
+			size: 200,
+			backgroundAlpha: 0, // 0 para fondo transparente
+			foreground: "#8bc34a", // Color del QR
+			level: "H", // Puede ser L,M,Q y H (L es el de menor nivel, H el mayor)
+		});
+	</script>
+</div>
+
+<div id="codigo2" class="codigo-qr">
+    <!-- Coloca aquí el código QR 2 -->
+    <img alt="Código QR 1" id="codigo">
+    <script>
+		new QRious({
+			element: document.querySelector("#codigo"),
+			value: "youtube.com", // La URL o el texto
+			size: 200,
+			backgroundAlpha: 0, // 0 para fondo transparente
+			foreground: "#8bc34a", // Color del QR
+			level: "H", // Puede ser L,M,Q y H (L es el de menor nivel, H el mayor)
+		});
+	</script>
+</div>
+
+<div id="codigo3" class="codigo-qr">
+    <!-- Coloca aquí el código QR 3 -->
+    <img alt="Código QR 1" id="codigo">
+    <script>
+		new QRious({
+			element: document.querySelector("#codigo"),
+			value: "youtube.com", // La URL o el texto
+			size: 200,
+			backgroundAlpha: 0, // 0 para fondo transparente
+			foreground: "#8bc34a", // Color del QR
+			level: "H", // Puede ser L,M,Q y H (L es el de menor nivel, H el mayor)
+		});
+	</script>
+</div>
+
+<script>
+    // Puedes generar códigos QR utilizando bibliotecas como QRCode.js
+
+    // Aquí, simplemente mostramos los códigos QR después de un evento (puede ser el escaneo)
+    function mostrarCodigosQR() {
+        var codigos = document.getElementsByClassName("codigo-qr");
+        for (var i = 0; i < codigos.length; i++) {
+            codigos[i].style.display = "block";
+        }
+    }
+
+    // Llamada a la función para mostrar los códigos (simulando el escaneo)
+    //mostrarCodigosQR();
+</script>
+
+</body>
+</html>
